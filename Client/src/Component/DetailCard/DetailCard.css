@@ -1,0 +1,64 @@
+/* Container for all cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow wrapping for responsive layout */
+}
+
+/* Individual card styles */
+.card {
+  flex: 1;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: #f4f8fc; /* Light blue */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlighted card style */
+.card.highlighted {
+  background-color: #3076bb; /* Blue */
+  color: #ffffff;
+}
+
+/* Card title */
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Card description */
+.card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.card.highlighted p {
+  color: #ffffff;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .cards-container {
+      flex-direction: column; /* Stack cards vertically on mobile */
+      gap: 20px; /* Adjust gap for smaller screens */
+  }
+
+  .card {
+      max-width: 100%; /* Make each card take full width */
+      margin-bottom: 20px; /* Add space between cards */
+  }
+}
